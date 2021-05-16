@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gke-standalone-app
+spec:
+  selector:
+    matchLabels:
+      app: gke-standalone-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gke-standalone-app
+    spec:
+      containers:
+      - name: gke-standalone-app
+        image: gcr.io/agmsb-k8s/gke-standalone-app
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+        env:
+        - name: ENABLE_ALPHA
+          valueFrom:
+            configMapKeyRef:
+              name: alpha-features
+              key: ENABLE_ALPHA

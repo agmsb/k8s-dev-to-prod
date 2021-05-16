@@ -1,0 +1,8 @@
+commonLabels:
+  env: dev
+bases:
+- ../../../infrastructure/kubernetes-manifests/gke-standalone-app/resources
+configMapGenerator:
+- name: alpha-features
+  literals:    
+  - ENABLE_ALPHA="true"
