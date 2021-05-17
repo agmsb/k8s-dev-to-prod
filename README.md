@@ -1,4 +1,4 @@
-# k8s-dev-to-prod
+# k8s-devs-and-ops
 Repository for dev to prod workshop with GKE. 
 
 Below are some of the various `gcloud` commands that are required throughout the workshop.
