@@ -1,5 +1,5 @@
 # k8s-devs-and-ops
-Repository for dev to prod workshop with GKE. 
+Repository for `k8s for developers and operators` workshop in GKE. 
 
 Below are some of the various `gcloud` commands that are required throughout the workshop.
 
