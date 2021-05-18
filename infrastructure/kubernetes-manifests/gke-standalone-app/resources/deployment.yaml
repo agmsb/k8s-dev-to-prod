@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: gke-standalone-app
-        image: gcr.io/agmsb-k8s/gke-standalone-app
+        image: gcr.io/<insert-project-id>/gke-standalone-app
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000

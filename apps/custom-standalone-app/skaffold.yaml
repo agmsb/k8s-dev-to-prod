@@ -2,7 +2,7 @@ apiVersion: skaffold/v2beta13
 kind: Config
 build:
   artifacts:
-  - image: gcr.io/agmsb-k8s/gke-standalone-app
+  - image: gcr.io/<insert-project-id>/gke-standalone-app
     buildpacks:
       builder: "gcr.io/buildpacks/builder:v1"
 deploy:
