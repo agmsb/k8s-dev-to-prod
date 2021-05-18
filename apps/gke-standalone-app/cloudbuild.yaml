@@ -1,0 +1,13 @@
+steps:
+- id: skaffold-run
+  name: "gcr.io/k8s-skaffold/skaffold:v1.23.0"
+  entrypoint: "/bin/bash"
+  args:
+    - '-c'
+    - |
+      gcloud container clusters get-credentials prod --zone us-west1-a --project agmsb-k8s
+      skaffold run -p prod
+  env:
+    - 'CLOUDSDK_COMPUTE_REGION=us-west1-a'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=prod'
+    - 'GCLOUD_PROJECT=agmsb-k8s'

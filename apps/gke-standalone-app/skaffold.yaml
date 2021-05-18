@@ -2,7 +2,7 @@ apiVersion: skaffold/v2beta13
 kind: Config
 build:
   artifacts:
-  - image: gcr.io/<insert-project-id>/gke-standalone-app
+  - image: gcr.io/PROJECT_ID/gke-standalone-app
     buildpacks:
       builder: "gcr.io/buildpacks/builder:v1"
 deploy:
@@ -23,4 +23,4 @@ profiles:
     deploy:
       kustomize:
         paths:
-        - ../../infrastructure/kubernetes-manifests/gke-standalone-app/overlays
+        - kubernetes-manifests/gke-standalone-app/overlays
