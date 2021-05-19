@@ -35,12 +35,6 @@ $ gcloud container clusters update "lab" \
   --add-maintenance-exclusion-start "$MAINTENANCE_EXCLUSION_START" \
   --add-maintenance-exclusion-end "+pt5m"
 ```
-### Configure GKE Surge Upgrades
-```
-$ gcloud beta container node-pools update "default-pool" \
-  --cluster="lab" \
-  --max-surge-upgrade=2 --max-unavailable-upgrade=2
-```
 ### Cleanup GKE Cluster
 ```
 $ gcloud container clusters delete "lab" \
