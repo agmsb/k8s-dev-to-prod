@@ -5,9 +5,9 @@ steps:
   args:
     - '-c'
     - |
-      gcloud container clusters get-credentials prod --zone us-west1-a --project agmsb-k8s
+      gcloud container clusters get-credentials prod --zone us-central1-a --project PROJECT_ID
       skaffold run -p prod
   env:
-    - 'CLOUDSDK_COMPUTE_REGION=us-west1-a'
-    - 'CLOUDSDK_CONTAINER_CLUSTER=prod'
-    - 'GCLOUD_PROJECT=agmsb-k8s'
+    - 'CLOUDSDK_COMPUTE_REGION=us-central1-a'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=lab'
+    - 'GCLOUD_PROJECT=PROJECT_ID'
